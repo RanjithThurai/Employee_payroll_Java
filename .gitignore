@@ -1,0 +1,16 @@
+# Ignore compiled class files
+*.class
+
+# Ignore bin folder
+bin/
+
+# Ignore libraries (optional if using Maven/Gradle)
+lib/
+
+# Ignore text/log files
+*.txt
+
+# IDE/editor specific files (optional)
+.vscode/
+.idea/
+*.iml
