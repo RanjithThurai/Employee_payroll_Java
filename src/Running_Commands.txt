@@ -1,0 +1,5 @@
+PS D:\Ranjith\Java\DEEP\EmployeePayrollSystem\src> javac -cp ".;..\lib\mysql-connector-j-9.4.0.jar" PayrollSystem.java
+>>
+PS D:\Ranjith\Java\DEEP\EmployeePayrollSystem\src> javac -cp ".;..\lib\mysql-connector-j-9.4.0.jar" *.java
+>>
+PS D:\Ranjith\Java\DEEP\EmployeePayrollSystem\src> java -cp ".;..\lib\mysql-connector-j-9.4.0.jar" PayrollSystem

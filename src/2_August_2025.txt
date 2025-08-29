@@ -1,0 +1,12 @@
+========== PAYSLIP ==========
+Employee ID: 2
+Name: Ranjith Thurai
+Position: CA
+Month: August 2025
+
+Basic Salary: 57000.00
+Overtime Pay: 0.00
+Gross Salary: 57000.00
+Tax Deduction: 8550.00
+Net Salary: 48450.00
+=============================
