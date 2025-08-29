@@ -4,7 +4,7 @@
 ![MySQL](https://img.shields.io/badge/Database-MySQL-blue)
 
 A Java-based Employee Payroll System to manage employee records, calculate salaries, and generate payslips efficiently.
-It is a Offline CLI Application.
+It is an Offline CLI Application.
 
 ---
 
