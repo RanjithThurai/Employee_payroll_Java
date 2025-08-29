@@ -22,8 +22,6 @@ A Java-based Employee Payroll System to manage employee records, calculate salar
 ---
 # Create the database Structure:
 
-# Create the database Structure:
-
 CREATE TABLE employees (
         id VARCHAR(20) PRIMARY KEY,
         name VARCHAR(100) NOT NULL,
