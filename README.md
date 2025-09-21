@@ -4,6 +4,7 @@
 ![MySQL](https://img.shields.io/badge/Database-MySQL-blue)
 
 A Java-based Employee Payroll System to manage employee records, calculate salaries, and generate payslips efficiently.
+It is an Offline CLI Application.
 
 ---
 
@@ -22,6 +23,11 @@ A Java-based Employee Payroll System to manage employee records, calculate salar
 ---
 # Create the database Structure:
 
+<<<<<<< HEAD
+=======
+# Create the database Structure:
+
+>>>>>>> ace5fd2ad6cc2581f9fceda2e1bd74c92f054447
 CREATE TABLE employees (
         id VARCHAR(20) PRIMARY KEY,
         name VARCHAR(100) NOT NULL,
@@ -53,4 +59,8 @@ CREATE TABLE employees (
 2. Compile all Java files:
    ```powershell
    javac -cp ".;..\lib\mysql-connector-j-9.4.0.jar" *.java
+<<<<<<< HEAD
    java -cp ".;..\lib\mysql-connector-j-9.4.0.jar" PayrollSystem
+=======
+   java -cp ".;..\lib\mysql-connector-j-9.4.0.jar" PayrollSystem
+>>>>>>> ace5fd2ad6cc2581f9fceda2e1bd74c92f054447
