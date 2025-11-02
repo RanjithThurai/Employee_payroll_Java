@@ -64,9 +64,9 @@ String username = "root";      // your MySQL username
 String password = "password";  // your MySQL password
 ```
 ▶️ How to Compile and Run
+```
 Step 1: Open Terminal
 Navigate to the src/ folder inside your project directory.
-
 Step 2: Compile Java Files
 bash
 Copy code
@@ -75,3 +75,4 @@ Step 3: Run the Application
 bash
 Copy code
 java -cp ".;..\lib\mysql-connector-j-9.4.0.jar" PayrollSystem
+```
