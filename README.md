@@ -31,7 +31,7 @@ Before running this project, ensure you have:
 ### Step 1: Create Database
 Open MySQL and create a database named **`payroll_db`**:
 
-sql
+```sql
 
 CREATE DATABASE payroll_db;
 USE payroll_db;
@@ -54,7 +54,7 @@ CREATE TABLE attendance (
     FOREIGN KEY (emp_id) REFERENCES employees(id),
     UNIQUE KEY unique_attendance (emp_id, date)
 );
-
+```
 ### ⚙️ Database Configuration
 Open the file **`DBConnection.java`** and update your MySQL credentials:
 
@@ -74,5 +74,3 @@ Step 3: Run the Application
 bash
 Copy code
 java -cp ".;..\lib\mysql-connector-j-9.4.0.jar" PayrollSystem
-👨‍💻 Author
-Ranjith Thurai
