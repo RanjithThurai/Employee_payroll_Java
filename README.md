@@ -35,7 +35,10 @@ Open MySQL and create a database named **`payroll_db`**:
 
 CREATE DATABASE payroll_db;
 USE payroll_db;
+```
+```
 Step 2: Create Tables
+
 Run the following SQL commands to create the necessary tables:
 
 CREATE TABLE employees (
