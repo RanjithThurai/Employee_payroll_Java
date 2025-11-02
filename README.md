@@ -30,6 +30,7 @@ Before running this project, ensure you have:
 
 ### Step 1: Create Database
 Open MySQL and create a database named **`payroll_db`**:
+
 ```sql
 CREATE DATABASE payroll_db;
 USE payroll_db;
@@ -62,3 +63,14 @@ Copy code
 String url = "jdbc:mysql://localhost:3306/payroll_db";
 String username = "root";      // your MySQL username
 String password = "password";  // your MySQL password
+▶️ How to Compile and Run
+Step 1: Open Terminal
+Navigate to the src/ folder inside your project directory.
+
+Step 2: Compile Java Files
+javac -cp ".;..\lib\mysql-connector-j-9.4.0.jar" *.java
+Step 3: Run the Application
+java -cp ".;..\lib\mysql-connector-j-9.4.0.jar" PayrollSystem
+
+👨‍💻 Author
+Ranjith Thurai
