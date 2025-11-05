@@ -1,3 +1,4 @@
+import java.io.File; // NEW IMPORT
 import java.io.FileWriter;
 import java.io.IOException;
 import java.sql.SQLException;
@@ -6,15 +7,26 @@ import java.util.List;
 
 public class ReportGenerator {
 
+    private static final String REPORTS_FOLDER = "payroll_reports"; // NEW CONSTANT
+
     public static void generateMonthlyPayrollRegister(int month, int year) throws SQLException {
         // 1. Get all employees
         List<Employee> employees = Employee.getAllEmployees();
         
-        String reportFileName = String.format("PayrollRegister_%d_%d.csv", year, month);
+        // 2. NEW: Ensure the reports folder exists
+        File folder = new File(REPORTS_FOLDER);
+        if (!folder.exists()) {
+            folder.mkdirs(); // Create the directory (and parent directories if they don't exist)
+        }
+        
+        // 3. Construct the full file path
+        String fileName = String.format("PayrollRegister_%d_%02d.csv", year, month); // Added %02d for two-digit month
+        String reportFilePath = REPORTS_FOLDER + File.separator + fileName; // Use File.separator for OS compatibility
         
         System.out.println("\nGenerating Monthly Payroll Register for " + month + "/" + year);
         
-        try (FileWriter writer = new FileWriter(reportFileName)) {
+        // 4. Use the new file path in FileWriter
+        try (FileWriter writer = new FileWriter(reportFilePath)) { 
             // Write CSV Header
             writer.append("ID,Name,Basic Salary,Overtime Hours,Overtime Pay,Gross Salary,Tax,PF,Net Salary\n");
             
@@ -50,7 +62,7 @@ public class ReportGenerator {
             // Write a footer with total payroll
             writer.append(String.format(",,,,,,TOTAL NET PAYROLL,,%.2f\n", totalNetPayroll));
 
-            System.out.println("✅ Report successfully generated and saved to: " + reportFileName);
+            System.out.println("✅ Report successfully generated and saved to: " + reportFilePath); // Print new path
         } catch (IOException e) {
             System.err.println("Error writing report file: " + e.getMessage());
         }
