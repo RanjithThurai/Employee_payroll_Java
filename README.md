@@ -43,8 +43,8 @@ Before running this project, ensure you have:
 
 ### Step 1: Create Database
 Open MySQL and create a database named **`payroll_db`**:
-
-```sql
+```
+sql
 CREATE DATABASE payroll_db;
 USE payroll_db;
 Step 2: Create Tables and Configuration
@@ -91,6 +91,8 @@ CREATE TABLE payroll_config (
 
 -- Initialize default rates
 INSERT INTO payroll_config (id, tax_rate, pf_rate, overtime_rate) VALUES (1, 0.15, 0.05, 1.50);
+```
+```
 ⚙️ Database Configuration
 Open the file DBConnection.java and update your MySQL credentials:
 
@@ -99,7 +101,9 @@ Java
 String URL = "jdbc:mysql://localhost:3306/payroll_db";
 String USER = "root";      // your MySQL username
 String PASSWORD = "";  // your MySQL password
+```
 ▶️ How to Compile and Run
+```
 Step 1: Open Terminal
 Navigate to the src/ folder inside your project directory.
 
@@ -114,4 +118,4 @@ Start the Payroll System:
 
 Bash
 
-java -cp ".;..\lib\mysql-connector-j-9.4.0.jar" PayrollSystem
+java -cp ".;..\lib\mysql-connector-j-9.4.0.jar" PayrollSystem```
